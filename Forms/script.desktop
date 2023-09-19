@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=main
+Exec=/usr/bin/python3 /home/inaki/Documents/Industria\ 4.0/Sistema-de-industria-4.0-/Forms/main.py
+Icon=/home/inaki/Documents/Industria\ 4.0/Sistema-de-industria-4.0-/Forms/servimetal.png
+Type=Application
+Terminal=true
+MimeType=text/x-python;

@@ -49,7 +49,7 @@ def create_login_window(on_success):
     customtkinter.set_default_color_theme("dark-blue")
 
     root = customtkinter.CTk()
-    root.geometry("900x900")
+    root.geometry("1000x600")
     # Set the title of the application window
     root.title("Login Page")
 
@@ -100,10 +100,11 @@ def create_login_window(on_success):
 
 # to run it alone
 
-
+'''
 
 if __name__ == "__main__":
     def on_success():
         print("Logged in successfully!")
 
     create_login_window(on_success)
+'''
