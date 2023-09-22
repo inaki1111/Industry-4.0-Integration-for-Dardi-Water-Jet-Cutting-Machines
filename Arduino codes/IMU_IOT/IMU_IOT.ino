@@ -1,24 +1,34 @@
 #include <Arduino.h>
-#include <PubSubClient.h>
+#include <Wire.h>
+#include <Adafruit_Sensor.h>
+#include <Adafruit_BNO055.h>
+#include <utility/imumaths.h>
 #include <WiFi.h>
-#include <Encoder.h>
+#include <PubSubClient.h>
+
+#define BNO055_SAMPLERATE_DELAY_MS (100)
+Adafruit_BNO055 bno = Adafruit_BNO055(55);
 
 const char* ssid = "Tec-IoT";
-const char* password = "spotless.magnetic.bridge";
-const char* mqtt_server = "MQTT_BROKER_IP";   // raspberrypi ip
+const char* password = "Tec-IoT";
+const char* mqtt_server = "MQTT_BROKER_IP"; // rasp ip
 
 WiFiClient espClient;
 PubSubClient client(espClient);
 
 const char* controlTopic = "esp32/start_stop_control";
-const char* encoderTopic = "encoder_x";
+const char* accelerationTopic = "acceleration";
 
 bool sendData = false;
 
-Encoder myEncoder(2, 3); // Change pins to your encoder pins
-
 void setup() {
   Serial.begin(115200);
+  if (!bno.begin())
+  {
+    Serial.print("No BNO055 detected.");
+    while (1);
+  }
+
   setup_wifi();
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
@@ -31,9 +41,19 @@ void loop() {
   client.loop();
 
   if (sendData) {
-    // Read encoder position and publish to MQTT topic
-    long encoderValue = myEncoder.read();
-    client.publish(encoderTopic, String(encoderValue).c_str());
+    sensors_event_t event;
+    bno.getEvent(&event);
+    
+    float accelerationX = event.acceleration.x;
+    float accelerationY = event.acceleration.y;
+    float accelerationZ = event.acceleration.z;
+    
+    // Calculate average acceleration
+    float averageAcceleration = (accelerationX + accelerationY + accelerationZ) / 3.0;
+    
+    // Publish average acceleration to MQTT topic
+    client.publish(accelerationTopic, String(averageAcceleration).c_str());
+    
     delay(1000); // Send data every second
   }
 }
@@ -48,10 +68,10 @@ void callback(char* topic, byte* payload, unsigned int length) {
   if (strcmp(topic, controlTopic) == 0) {
     if (msg == "start") {
       sendData = true;
-      Serial.println("Started sending encoder data.");
+      Serial.println("Started sending average acceleration data.");
     } else if (msg == "stop") {
       sendData = false;
-      Serial.println("Stopped sending encoder data.");
+      Serial.println("Stopped sending average acceleration data.");
     }
   }
 }
