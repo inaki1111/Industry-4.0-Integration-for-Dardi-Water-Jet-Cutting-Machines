@@ -19,7 +19,7 @@ class Gradebook(ttk.Frame):
         self.final_score = ttk.DoubleVar(value=0)
         self.elapsed_time = 0
         self.start_time = None
-        self.stop_event = threading.Event()  # Event to control the timer
+        self.stop_event = threading.Event()  # Evento para controlar el temporizador
         self.data = []
         self.colors = master_window.style.colors
 
@@ -123,7 +123,7 @@ class Gradebook(ttk.Frame):
             {"text": "Tiempo Transcurrido (s)", "stretch": False}
         ]
 
-        # Load data from CSV
+        # Cargar datos desde el archivo CSV
         self.load_data_from_csv()
 
         table = Tableview(
@@ -138,7 +138,7 @@ class Gradebook(ttk.Frame):
 
         table.pack(fill=BOTH, expand=YES, padx=10, pady=10)
 
-        # Explicitly update the layout
+        # Actualizar explícitamente el diseño
         self.update()
 
         return table
@@ -146,25 +146,25 @@ class Gradebook(ttk.Frame):
     def load_data_from_csv(self):
         csv_file = "data.csv"
 
-        # Create the CSV file if it doesn't exist
+        # Crear el archivo CSV si no existe
         if not os.path.exists(csv_file):
             with open(csv_file, 'w', newline='') as file:
                 writer = csv.writer(file)
-                # Write header row
+                # Escribir la fila de encabezado
                 writer.writerow(["Fecha", "Hora", "Nombre del trabajo", "Cliente", "Tiempo de corte aproximado", "Detalles", "Tiempo Transcurrido (s)"])
         else:
-            # Load data from CSV
+            # Cargar datos desde el archivo CSV
             with open(csv_file, 'r', newline='') as file:
                 reader = csv.reader(file)
-                header = next(reader, None)  # Get the header row
+                header = next(reader, None)  # Obtener la fila de encabezado
                 if header:
-                    self.data = [header]  # Set the header in the data list
+                    self.data = [header]  # Establecer el encabezado en la lista de datos
                 self.data.extend([row for row in reader])
 
     def create_realtime_label(self):
         self.realtime_label = ttk.Label(
             self,
-            text="Tiempo Transcurrido (s): 0.00",  # Initial value
+            text="Tiempo Transcurrido (s): 0.00",  # Valor inicial
             width=30,
         )
         self.realtime_label.pack(pady=5)
@@ -175,29 +175,29 @@ class Gradebook(ttk.Frame):
                 current_time = time.time()
                 elapsed_time = round(current_time - self.start_time, 2)
                 self.realtime_label.config(text=f"Tiempo Transcurrido (s): {elapsed_time}")
-            time.sleep(0.1)  # Update every 0.1 seconds
+            time.sleep(0.1)  # Actualizar cada 0.1 segundos
 
     def start_counter(self):
-        """Start the timer when the button is clicked and start the real-time update thread."""
+        """Iniciar el temporizador cuando se hace clic en el botón y comenzar el hilo de actualización en tiempo real."""
         self.start_time = time.time()
-        self.stop_event.clear()  # Clear the stop event
+        self.stop_event.clear()  # Borrar el evento de detención
         threading.Thread(target=self.update_realtime_label).start()
 
     def stop_counter(self):
-        """Stop the timer and update the elapsed time."""
+        """Detener el temporizador y actualizar el tiempo transcurrido."""
         if self.start_time is not None:
             self.elapsed_time = round(time.time() - self.start_time, 2)
             self.start_time = None
-            self.stop_event.set()  # Set the stop event
+            self.stop_event.set()  # Establecer el evento de detención
 
     def on_submit(self):
-        """Print the contents to console, store in CSV with date, time, and elapsed time, and return the values."""
+        """Imprimir el contenido en la consola, almacenar en el archivo CSV con fecha, hora y tiempo transcurrido, y devolver los valores."""
         name = self.name.get()
         student_id = self.student_id.get()
         course_name = self.course_name.get()
-        final_score = self.final_score_input.get()  # Get value from the Entry widget
+        final_score = self.final_score_input.get()  # Obtener el valor del widget de entrada
 
-        # Get the current date and time
+        # Obtener la fecha y hora actual
         current_datetime = datetime.datetime.now()
         formatted_date = current_datetime.strftime("%Y-%m-%d")
         formatted_time = current_datetime.strftime("%H:%M:%S")
@@ -208,16 +208,16 @@ class Gradebook(ttk.Frame):
         print("Cliente: ", student_id)
         print("Tiempo de corte aproximado:", course_name)
         print("Detalles:", final_score)
-        print("Tiempo Transcurrido (s):", self.elapsed_time)  # Print elapsed time
+        print("Tiempo Transcurrido (s):", self.elapsed_time)  # Imprimir tiempo transcurrido
 
-        # Store the data in a CSV file with date, time, and elapsed time
+        # Almacenar los datos en un archivo CSV con fecha, hora y tiempo transcurrido
         csv_file = "data.csv"
 
         with open(csv_file, 'a', newline='') as file:
             writer = csv.writer(file)
             writer.writerow([formatted_date, formatted_time, name, student_id, course_name, final_score, self.elapsed_time])
 
-        # Show a toast notification
+        # Mostrar una notificación emergente
         toast = ToastNotification(
             title="Envío exitoso",
             message="Tu información ha sido enviada exitosamente.",
@@ -225,22 +225,22 @@ class Gradebook(ttk.Frame):
         )
         toast.show_toast()
 
-        # Refresh table
+        # Actualizar la tabla
         self.data.append([formatted_date, formatted_time, name, student_id, course_name, final_score, self.elapsed_time])
         self.table.destroy()
         self.table = self.create_table()
 
     def on_cancel(self):
-        """Cancel and close the application."""
+        """Cancelar y cerrar la aplicación."""
         self.quit()
 
     def on_logout(self):
-        """Handle logout functionality if needed."""
+        """Manejar la funcionalidad de cierre de sesión si es necesario."""
         pass
 
 def start_forms():
-    app = ttk.Window("Monitoreo de la maquina", "superhero", resizable=(True, True))
-    app.geometry("1000x600")  # Set the initial window size
+    app = ttk.Window("Monitoreo de la máquina", "superhero", resizable=(True, True))
+    app.geometry("1000x600")  # Establecer el tamaño inicial de la ventana
     Gradebook(app)
     app.mainloop()
 
