@@ -15,17 +15,15 @@ void setup() {
 }
 
 void loop() {
-  int xValue = analogRead(xPin); // Read X-axis value
-  int yValue = analogRead(yPin); // Read Y-axis value
-  int zValue = analogRead(zPin); // Read Z-axis value
+  float xValue = analogRead(xPin); // Read X-axis value
+  float yValue = analogRead(yPin); // Read Y-axis value
+  float zValue = analogRead(zPin); // Read Z-axis value
+
+  float total;
+  total = sqrt((xValue)*(xValue) + (yValue)*(yValue)+(zValue)*(zValue));
 
   // Print the values to the serial monitor
-  Serial.print("X-Axis: ");
-  Serial.print(xValue);
-  Serial.print("\tY-Axis: ");
-  Serial.print(yValue);
-  Serial.print("\tZ-Axis: ");
-  Serial.println(zValue);
+  Serial.println(total);
 
-  delay(1000); // Delay for readability
+  delay(10); // Delay for readability
 }

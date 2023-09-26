@@ -1,8 +1,10 @@
 Fecha,Hora,Nombre del trabajo,Cliente,Tiempo de corte aproximado,Detalles,Tiempo Transcurrido (s)
-2023-09-18,19:13:53,trabajo1,cliente1,10,50,4.17
-2023-09-18,19:14:34,trabajo1,cliente1,10,50,8.55
-2023-09-18,19:18:34,trabajo2,cliente2,10,50,1.02
-2023-09-18,19:18:44,trabajo2,cliente2,10,50,1.62
-2023-09-18,20:15:44,trabajo1,cliente1,10,50,1.72
-2023-09-18,20:16:46,trabajo1,cliente1,10,50,2.58
-2023-09-21,18:34:33,,,,50,0.94
+2023-09-25,16:51:27,trabajo 1,Cliente 1,10,no hay detalles,2.77
+2023-09-25,16:51:41,trabajo 2,Cliente 2,15,no hay detalles,2.25
+2023-09-25,16:52:46,trabajo 3,cliente 3,20,no hay detalles,2
+2023-09-25,17:09:41,trabajo1,cleinte 1,55,na,1.91
+2023-09-25,17:15:28,trabajo 1,trabajo 2,30,na,0.57
+2023-09-25,17:19:19,trabajo 23,cleinte 23,20,na,2.61
+2023-09-25,17:19:27,trabajo 23,cleinte 23,20,na,2
+2023-09-25,17:47:14,trabajo 132,cleinte 132,20,02,2.382023-09-25,18:06:40,dfkgvnasoj,sokfwoik,sokfnsok,okdfnwseokfnm,1.53
+2023-09-25,18:08:12,,,12,0,1.86
