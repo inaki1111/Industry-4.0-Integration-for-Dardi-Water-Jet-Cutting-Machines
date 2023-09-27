@@ -33,7 +33,7 @@ def on_message(client, userdata, message):
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
-client.connect("your_broker_address", 1883, 60)
+client.connect("localhost", 1883, 60)  
 
 with open(filename, 'w', newline='') as csvfile:
     csvwriter = csv.DictWriter(csvfile, fieldnames=fields)

@@ -1,23 +1,22 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
-#include <Encoder.h>
 
-// Replace with your network credentials
+// Replace with your Wi-Fi credentials
 const char* ssid = "Tec-IoT";
 const char* password = "spotless.magnetic.bridge";
 
-// MQTT broker information
+// Replace with your MQTT broker details
 const char* mqtt_server = "10.25.75.245";
 const int mqtt_port = 1883;
-const char* start_topic = "start_process";
-const char* encoder_topic = "Encoder_X";
+const char* mqtt_topic = "machine_state"; // rapsp
+
+// Digital input pin (D23)
+const int digitalInputPin = 23; // Use GPIO pin 23
 
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-Encoder myEncoder(2, 3); // Replace with your encoder pin numbers
-
-bool send_data = false;
+bool isHigh = false; // To keep track of the input state
 
 void setup_wifi() {
   delay(10);
@@ -26,6 +25,7 @@ void setup_wifi() {
   Serial.println(ssid);
 
   WiFi.begin(ssid, password);
+
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
     Serial.print(".");
@@ -38,23 +38,7 @@ void setup_wifi() {
 }
 
 void callback(char* topic, byte* payload, unsigned int length) {
-  String received_message = "";
-  for (int i = 0; i < length; i++) {
-    received_message += (char)payload[i];
-  }
-
-  Serial.print("Received message on topic '");
-  Serial.print(topic);
-  Serial.print("': ");
-  Serial.println(received_message);
-
-  if (strcmp(topic, start_topic) == 0) {
-    if (received_message == "send_data") {
-      send_data = true;
-    } else {
-      send_data = false;
-    }
-  }
+  // Handle MQTT messages if needed
 }
 
 void reconnect() {
@@ -62,7 +46,6 @@ void reconnect() {
     Serial.print("Attempting MQTT connection...");
     if (client.connect("ESP32Client")) {
       Serial.println("connected");
-      client.subscribe(start_topic);
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
@@ -74,14 +57,11 @@ void reconnect() {
 
 void setup() {
   Serial.begin(115200);
-  pinMode(2, INPUT); // Replace with your encoder pin initialization
+  pinMode(digitalInputPin, INPUT);
 
   setup_wifi();
   client.setServer(mqtt_server, mqtt_port);
   client.setCallback(callback);
-
-  // Initialize encoder
-  myEncoder.write(0); // Initialize encoder position
 }
 
 unsigned long lastPublishTime = 0; // To track the last time we published
@@ -93,7 +73,7 @@ void loop() {
   }
   client.loop();
 
-  bool currentInputState = digitalRead(2); // Replace with your encoder pin
+  bool currentInputState = digitalRead(digitalInputPin);
 
   // Print sensor state with timestamp continuously
   unsigned long currentTime = millis();
@@ -105,17 +85,16 @@ void loop() {
     Serial.println(currentInputState);
   }
 
-  if (currentInputState && send_data) {
-    // Read the encoder position
-    long encoderValue = myEncoder.read();
+  if (currentInputState != isHigh) {
+    isHigh = currentInputState; // Update the state
 
-    // Publish the encoder value to the MQTT topic
-    char message[10];
-    snprintf(message, sizeof(message), "%ld", encoderValue);
-    client.publish(encoder_topic, message);
-
-    Serial.print("Encoder Value: ");
-    Serial.println(encoderValue);
+    if (isHigh) {
+      client.publish(mqtt_topic, "send_data");
+      Serial.println("Input state changed to HIGH");
+    } else {
+      client.publish(mqtt_topic, "stop_send_data");
+      Serial.println("Input state changed to LOW");
+    }
   }
 
   // Add a small delay to prevent excessive serial printing
