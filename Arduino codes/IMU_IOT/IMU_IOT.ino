@@ -42,6 +42,7 @@ void setup() {
     Serial.println("Failed to find MPU6050 sensor");
     while (1);
   }
+  //client.subscribe(start_topic);
 }
 
 void callback(char* topic, byte* payload, unsigned int length) {
@@ -85,24 +86,24 @@ void loop() {
   }
   client.loop();
 
-  if (send_data) {
-    sensors_event_t accel;
-    mpu.getEvent(&accel);
+  if (send_data == true) {
+    sensors_event_t a, g, temp;
+    mpu.getEvent(&a, &g, &temp);
 
-    float acceleration_x = accel.acceleration.x;
-    float acceleration_y = accel.acceleration.y;
-    float acceleration_z = accel.acceleration.z;
+    float ax = a.acceleration.x;
+    float ay = a.acceleration.y;
+    float az = a.acceleration.z;
 
     // Calculate the average acceleration
-    float average_acceleration = (acceleration_x + acceleration_y + acceleration_z) / 3.0;
+    float absoluteAcc = sqrt(ax * ax + ay * ay + az * az);
 
     // Publish the average acceleration to the MQTT topic
     char message[10];
-    snprintf(message, sizeof(message), "%.2f", average_acceleration);
+    snprintf(message, sizeof(message), "%.2f", absoluteAcc);
     client.publish(acceleration_topic, message);
 
     Serial.print("Average Acceleration: ");
-    Serial.println(average_acceleration);
+    Serial.println(absoluteAcc);
   }
 
   delay(1000);
