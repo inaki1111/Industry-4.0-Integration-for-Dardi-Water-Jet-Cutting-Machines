@@ -1,123 +1,46 @@
-#include <WiFi.h>
-#include <PubSubClient.h>
-#include <Encoder.h>
+int encoder_Pin_1 = 4;
+int encoder_Pin_2 = 5;
 
-// Replace with your network credentials
-const char* ssid = "Tec-IoT";
-const char* password = "spotless.magnetic.bridge";
+volatile int lastEncoded = 0;
+volatile long encoderValue = 0;
 
-// MQTT broker information
-const char* mqtt_server = "10.25.75.245";
-const int mqtt_port = 1883;
-const char* start_topic = "start_process";
-const char* encoder_topic = "Encoder_X";
+long lastencoderValue = 0;
 
-WiFiClient espClient;
-PubSubClient client(espClient);
+int lastMSB = 0;
+int lastLSB = 0;
 
-Encoder myEncoder(2, 3); // Replace with your encoder pin numbers
+// Function prototype
+void IRAM_ATTR updateEncoder();
 
-bool send_data = false;
+void setup()
+{
+  Serial.begin (9600);
 
-void setup_wifi() {
-  delay(10);
-  Serial.println();
-  Serial.print("Connecting to ");
-  Serial.println(ssid);
+  pinMode(encoder_Pin_1, INPUT_PULLUP); 
+  pinMode(encoder_Pin_2, INPUT_PULLUP);
 
-  WiFi.begin(ssid, password);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
-    Serial.print(".");
-  }
-
-  Serial.println("");
-  Serial.println("WiFi connected");
-  Serial.println("IP address: ");
-  Serial.println(WiFi.localIP());
+  //call updateEncoder() when any high/low change is seen
+  //on the encoder pins
+  attachInterrupt(digitalPinToInterrupt(encoder_Pin_1), updateEncoder, CHANGE); 
+  attachInterrupt(digitalPinToInterrupt(encoder_Pin_2), updateEncoder, CHANGE);
 }
 
-void callback(char* topic, byte* payload, unsigned int length) {
-  String received_message = "";
-  for (int i = 0; i < length; i++) {
-    received_message += (char)payload[i];
-  }
-
-  Serial.print("Received message on topic '");
-  Serial.print(topic);
-  Serial.print("': ");
-  Serial.println(received_message);
-
-  if (strcmp(topic, start_topic) == 0) {
-    if (received_message == "send_data") {
-      send_data = true;
-    } else {
-      send_data = false;
-    }
-  }
+void loop()
+{ 
+  Serial.println(encoderValue);
+  delay(1000); //just here to slow down the output, and show it will work even during a delay
 }
 
-void reconnect() {
-  while (!client.connected()) {
-    Serial.print("Attempting MQTT connection...");
-    if (client.connect("ESP32Client")) {
-      Serial.println("connected");
-      client.subscribe(start_topic);
-    } else {
-      Serial.print("failed, rc=");
-      Serial.print(client.state());
-      Serial.println(" try again in 5 seconds");
-      delay(5000);
-    }
-  }
-}
+void IRAM_ATTR updateEncoder() 
+{
+  int MSB = digitalRead(encoder_Pin_1); //MSB = most significant bit
+  int LSB = digitalRead(encoder_Pin_2); //LSB = least significant bit
 
-void setup() {
-  Serial.begin(115200);
-  pinMode(2, INPUT); // Replace with your encoder pin initialization
+  int encoded = (MSB << 1) | LSB; //converting the 2 pin value to single number
+  int sum  = (lastEncoded << 2) | encoded; //adding it to the previous encoded value
 
-  setup_wifi();
-  client.setServer(mqtt_server, mqtt_port);
-  client.setCallback(callback);
+  if(sum == 0b1101 || sum == 0b0100 || sum == 0b0010 || sum == 0b1011) encoderValue ++;
+  if(sum == 0b1110 || sum == 0b0111 || sum == 0b0001 || sum == 0b1000) encoderValue --;
 
-  // Initialize encoder
-  myEncoder.write(0); // Initialize encoder position
-}
-
-unsigned long lastPublishTime = 0; // To track the last time we published
-unsigned long publishInterval = 1000; // Adjust this interval as needed (in milliseconds)
-
-void loop() {
-  if (!client.connected()) {
-    reconnect();
-  }
-  client.loop();
-
-  bool currentInputState = digitalRead(2); // Replace with your encoder pin
-
-  // Print sensor state with timestamp continuously
-  unsigned long currentTime = millis();
-  if (currentTime - lastPublishTime >= publishInterval) {
-    lastPublishTime = currentTime;
-    Serial.print("Sensor state at ");
-    Serial.print(currentTime);
-    Serial.print("ms: ");
-    Serial.println(currentInputState);
-  }
-
-  if (currentInputState && send_data) {
-    // Read the encoder position
-    long encoderValue = myEncoder.read();
-
-    // Publish the encoder value to the MQTT topic
-    char message[10];
-    snprintf(message, sizeof(message), "%ld", encoderValue);
-    client.publish(encoder_topic, message);
-
-    Serial.print("Encoder Value: ");
-    Serial.println(encoderValue);
-  }
-
-  // Add a small delay to prevent excessive serial printing
-  delay(10);
+  lastEncoded = encoded; //store this value for next time
 }
