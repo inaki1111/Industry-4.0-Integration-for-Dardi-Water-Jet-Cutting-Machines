@@ -6,7 +6,7 @@ from tkinter.simpledialog import askstring
 
 def check_login(entered_username, entered_password):
     try:
-        with open("/home/inaki/Documents/Industria 4.0/Sistema-de-industria-4.0-/Forms/enterLog.txt", "r") as file:
+        with open("/home/cimatec/Documentos/Sistema-de-industria-4.0-/Forms/enterLog.txt", "r") as file:
             # Read the lines and remove leading/trailing whitespace and square brackets.
             lines = [line.strip('[]').strip() for line in file]
 

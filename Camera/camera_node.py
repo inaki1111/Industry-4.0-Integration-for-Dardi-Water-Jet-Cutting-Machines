@@ -19,8 +19,6 @@ s3_key = 'photo.jpg'  # Replace 'photo.jpg' with the desired file name
 mqtt_broker = "localhost"  # Replace with your MQTT broker address
 mqtt_topic = "machine_state"
 
-mqtt_username = "your_mqtt_username"
-mqtt_password = "your_mqtt_password"
 
 # Specify the desired resolution here
 width = 640  # Width of the resolution

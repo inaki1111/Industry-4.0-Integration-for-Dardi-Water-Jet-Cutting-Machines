@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Video Feed</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #003366;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .centered-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        img.video-feed {
+            max-width: 90%;
+            height: auto;
+        }
+        
+        .small-image {
+            max-width: 20%;
+            /* Adjust this percentage as needed */
+            height: auto;
+            margin-right: 10px;
+        }
+        
+        #current-time {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="centered-content">
+        <h1>Live Video Feed</h1>
+        <div style="display: flex; align-items: center;">
+            <img src="/images/maxiem.png" alt="Small Image" class="small-image">
+            <img src="/video_feed" alt="Video Feed" class="video-feed">
+        </div>
+        <div id="current-time"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script type="text/javascript">
+        function updateCurrentTime() {
+            var currentTime = new Date();
+            var hours = String(currentTime.getHours()).padStart(2, '0');
+            var minutes = String(currentTime.getMinutes()).padStart(2, '0');
+            var seconds = String(currentTime.getSeconds()).padStart(2, '0');
+            document.getElementById('current-time').textContent = hours + ':' + minutes + ':' + seconds;
+        }
+
+        setInterval(updateCurrentTime, 1000); // Update every second
+    </script>
+</body>
+
+</html>

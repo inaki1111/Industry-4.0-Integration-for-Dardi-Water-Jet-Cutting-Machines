@@ -1,7 +1,8 @@
 import paho.mqtt.client as mqtt
 
 # MQTT broker details
-mqtt_broker = "10.25.75.245"
+mqtt_broker = "localhost"
+print("brocker", mqtt_broker)
 mqtt_port = 1883
 
 # Topics
