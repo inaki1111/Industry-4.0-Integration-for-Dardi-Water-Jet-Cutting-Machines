@@ -54544,3 +54544,14 @@
 2023-10-25 17:31:37,770 [INFO]: Received MQTT message: send_data
 2023-10-25 17:31:37,821 [INFO]: Image saved locally at: images/captured_image.jpg
 2023-10-25 17:31:39,188 [INFO]: Image uploaded to S3: mybucketcima/Industria40/captured_image.jpg
+2023-10-25 18:23:54,984 [INFO]: Connected to MQTT broker with result code 0
+2023-10-25 18:23:54,985 [INFO]: Running on http://127.0.1.1:5000/
+2023-10-25 18:23:55,012 [INFO]:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2023-10-25 18:25:33,103 [INFO]: 10.25.101.148 - - [25/Oct/2023 18:25:33] "[37mGET / HTTP/1.1[0m" 200 -
+2023-10-25 18:25:33,271 [INFO]: 10.25.101.148 - - [25/Oct/2023 18:25:33] "[37mGET /video_feed HTTP/1.1[0m" 200 -
+2023-10-25 18:27:52,263 [INFO]: Received MQTT message: send_data
+2023-10-25 18:27:52,304 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-25 18:27:53,843 [INFO]: Image uploaded to S3: mybucketcima/Industria40/captured_image.jpg
+2023-10-25 18:28:10,858 [INFO]: 10.25.101.148 - - [25/Oct/2023 18:28:10] "[37mGET / HTTP/1.1[0m" 200 -
+2023-10-25 18:28:11,021 [INFO]: 10.25.101.148 - - [25/Oct/2023 18:28:11] "[37mGET /video_feed HTTP/1.1[0m" 200 -
+2023-10-25 18:28:35,661 [INFO]: Received MQTT message: stop_send_data
