@@ -265,7 +265,7 @@ class Gradebook(ttk.Frame):
             writer.writerow([formatted_date, formatted_time, name, student_id, course_name, final_score, self.elapsed_time])
         
         # Upload the CSV to S3
-        self.upload_to_s3(csv_file, 'mybucketcima', '/data.csv')
+        self.upload_to_s3(csv_file, 'mybucketcima', 'data.csv')
         
         toast = ToastNotification(
             title="Envío exitoso",

@@ -54555,3 +54555,90 @@
 2023-10-25 18:28:10,858 [INFO]: 10.25.101.148 - - [25/Oct/2023 18:28:10] "[37mGET / HTTP/1.1[0m" 200 -
 2023-10-25 18:28:11,021 [INFO]: 10.25.101.148 - - [25/Oct/2023 18:28:11] "[37mGET /video_feed HTTP/1.1[0m" 200 -
 2023-10-25 18:28:35,661 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 08:20:45,969 [INFO]: Connected to MQTT broker with result code 0
+2023-10-27 08:20:45,970 [INFO]: Running on http://127.0.1.1:5000/
+2023-10-27 08:20:46,025 [INFO]:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2023-10-27 08:26:40,259 [INFO]: Connected to MQTT broker with result code 0
+2023-10-27 08:26:40,259 [INFO]: Running on http://127.0.1.1:5000/
+2023-10-27 08:26:40,274 [INFO]:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2023-10-27 08:26:45,988 [INFO]: 10.25.80.104 - - [27/Oct/2023 08:26:45] "[37mGET / HTTP/1.1[0m" 200 -
+2023-10-27 08:26:46,040 [INFO]: 10.25.80.104 - - [27/Oct/2023 08:26:46] "[37mGET /video_feed HTTP/1.1[0m" 200 -
+2023-10-27 08:26:46,044 [INFO]: 10.25.80.104 - - [27/Oct/2023 08:26:46] "[37mGET /images/maxiem.png HTTP/1.1[0m" 200 -
+2023-10-27 08:26:46,527 [INFO]: 10.25.80.104 - - [27/Oct/2023 08:26:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-10-27 08:29:16,711 [INFO]: 10.25.80.104 - - [27/Oct/2023 08:29:16] "[37mGET / HTTP/1.1[0m" 200 -
+2023-10-27 08:29:16,747 [INFO]: 10.25.80.104 - - [27/Oct/2023 08:29:16] "[37mGET /video_feed HTTP/1.1[0m" 200 -
+2023-10-27 08:30:19,701 [INFO]: 10.25.80.104 - - [27/Oct/2023 08:30:19] "[37mGET / HTTP/1.1[0m" 200 -
+2023-10-27 08:30:19,734 [INFO]: 10.25.80.104 - - [27/Oct/2023 08:30:19] "[37mGET /video_feed HTTP/1.1[0m" 200 -
+2023-10-27 08:31:14,564 [INFO]: 10.25.80.104 - - [27/Oct/2023 08:31:14] "[37mGET / HTTP/1.1[0m" 200 -
+2023-10-27 08:31:14,603 [INFO]: 10.25.80.104 - - [27/Oct/2023 08:31:14] "[37mGET /video_feed HTTP/1.1[0m" 200 -
+2023-10-27 08:34:12,643 [INFO]: 10.25.80.104 - - [27/Oct/2023 08:34:12] "[37mGET / HTTP/1.1[0m" 200 -
+2023-10-27 08:34:12,676 [INFO]: 10.25.80.104 - - [27/Oct/2023 08:34:12] "[37mGET /video_feed HTTP/1.1[0m" 200 -
+2023-10-27 08:55:20,295 [INFO]: Received MQTT message: send_data
+2023-10-27 08:55:20,316 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-27 08:55:27,194 [INFO]: Image uploaded to S3: mybucketcima/captured_image.jpg
+2023-10-27 08:55:27,695 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 08:55:30,696 [INFO]: Received MQTT message: send_data
+2023-10-27 08:55:39,696 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 08:55:42,696 [INFO]: Received MQTT message: send_data
+2023-10-27 08:55:52,295 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 08:55:55,096 [INFO]: Received MQTT message: send_data
+2023-10-27 08:56:03,497 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 08:56:06,496 [INFO]: Received MQTT message: send_data
+2023-10-27 08:56:15,497 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 08:56:19,697 [INFO]: Received MQTT message: send_data
+2023-10-27 08:56:23,297 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 08:56:27,697 [INFO]: Received MQTT message: send_data
+2023-10-27 08:56:45,698 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 08:59:11,502 [INFO]: Received MQTT message: send_data
+2023-10-27 08:59:11,545 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-27 08:59:14,708 [INFO]: Image uploaded to S3: mybucketcima/captured_image.jpg
+2023-10-27 08:59:18,900 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 08:59:21,899 [INFO]: Received MQTT message: send_data
+2023-10-27 08:59:30,898 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 08:59:33,897 [INFO]: Received MQTT message: send_data
+2023-10-27 08:59:43,496 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 08:59:46,295 [INFO]: Received MQTT message: send_data
+2023-10-27 08:59:54,694 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 08:59:57,693 [INFO]: Received MQTT message: send_data
+2023-10-27 09:00:06,692 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:00:10,891 [INFO]: Received MQTT message: send_data
+2023-10-27 09:00:14,491 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:00:18,890 [INFO]: Received MQTT message: send_data
+2023-10-27 09:00:36,888 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:02:06,277 [INFO]: Received MQTT message: send_data
+2023-10-27 09:02:06,329 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-27 09:02:08,047 [INFO]: Image uploaded to S3: mybucketcima/captured_image.jpg
+2023-10-27 09:02:13,876 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:02:16,877 [INFO]: Received MQTT message: send_data
+2023-10-27 09:02:25,875 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:02:28,876 [INFO]: Received MQTT message: send_data
+2023-10-27 09:02:38,274 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:02:41,274 [INFO]: Received MQTT message: send_data
+2023-10-27 09:02:49,674 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:02:52,474 [INFO]: Received MQTT message: send_data
+2023-10-27 09:03:01,672 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:03:05,672 [INFO]: Received MQTT message: send_data
+2023-10-27 09:03:09,272 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:03:13,671 [INFO]: Received MQTT message: send_data
+2023-10-27 09:03:31,670 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:11:10,414 [INFO]: Connected to MQTT broker with result code 0
+2023-10-27 09:11:10,415 [INFO]: Running on http://127.0.1.1:5000/
+2023-10-27 09:11:10,431 [INFO]:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2023-10-27 09:11:30,518 [INFO]: 10.25.80.104 - - [27/Oct/2023 09:11:30] "[37mGET / HTTP/1.1[0m" 200 -
+2023-10-27 09:11:30,550 [INFO]: 10.25.80.104 - - [27/Oct/2023 09:11:30] "[37mGET /video_feed HTTP/1.1[0m" 200 -
+2023-10-27 09:11:51,259 [INFO]: Received MQTT message: send_data
+2023-10-27 09:11:58,858 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:12:01,859 [INFO]: Received MQTT message: send_data
+2023-10-27 09:12:10,858 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:12:13,859 [INFO]: Received MQTT message: send_data
+2023-10-27 09:12:23,259 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:12:26,259 [INFO]: Received MQTT message: send_data
+2023-10-27 09:12:34,658 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:12:37,459 [INFO]: Received MQTT message: send_data
+2023-10-27 09:12:46,658 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:12:50,659 [INFO]: Received MQTT message: send_data
+2023-10-27 09:12:54,259 [INFO]: Received MQTT message: stop_send_data
+2023-10-27 09:12:58,659 [INFO]: Received MQTT message: send_data
+2023-10-27 09:13:11,196 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-27 09:13:12,997 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-27 09:13:16,659 [INFO]: Received MQTT message: stop_send_data

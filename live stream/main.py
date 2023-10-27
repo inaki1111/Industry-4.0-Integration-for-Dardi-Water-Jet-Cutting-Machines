@@ -95,8 +95,8 @@ def capture_frames():
 
                 # Upload to S3
                 with open(filename, "rb") as f:
-                    s3.upload_fileobj(f, BUCKET_NAME, "Industria 40/live_feed/captured_image.jpg")
-                logging.info(f"Image uploaded to S3: {BUCKET_NAME}/Industria40/captured_image.jpg")
+                    s3.upload_fileobj(f, BUCKET_NAME, "captured_image.jpg")
+                logging.info(f"Image uploaded to S3: {BUCKET_NAME}captured_image.jpg")
 
                 last_saved_time = time.time()
 
