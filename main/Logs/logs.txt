@@ -54642,3 +54642,315 @@
 2023-10-27 09:13:11,196 [INFO]: Image saved locally at: images/captured_image.jpg
 2023-10-27 09:13:12,997 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
 2023-10-27 09:13:16,659 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:13:45,287 [INFO]: Connected to MQTT broker with result code 0
+2023-10-31 15:13:45,288 [INFO]: Running on http://127.0.1.1:5000/
+2023-10-31 15:13:45,399 [INFO]:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2023-10-31 15:14:35,065 [INFO]: Connected to MQTT broker with result code 0
+2023-10-31 15:14:35,074 [INFO]: Running on http://127.0.1.1:5000/
+2023-10-31 15:14:35,125 [INFO]:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2023-10-31 15:15:24,684 [INFO]: 10.25.70.252 - - [31/Oct/2023 15:15:24] "[37mGET / HTTP/1.1[0m" 200 -
+2023-10-31 15:15:29,373 [INFO]: 10.25.70.252 - - [31/Oct/2023 15:15:29] "[37mGET /video_feed HTTP/1.1[0m" 200 -
+2023-10-31 15:15:29,403 [INFO]: 10.25.70.252 - - [31/Oct/2023 15:15:29] "[36mGET /images/maxiem.png HTTP/1.1[0m" 304 -
+2023-10-31 15:16:01,440 [INFO]: 10.25.70.252 - - [31/Oct/2023 15:16:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-10-31 15:17:49,969 [INFO]: Received MQTT message: send_data
+2023-10-31 15:17:50,022 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:17:51,666 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:19:51,700 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:19:52,670 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:19:57,451 [INFO]: Received MQTT message: send_data
+2023-10-31 15:20:02,370 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:21:42,805 [INFO]: Received MQTT message: send_data
+2023-10-31 15:21:52,004 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:21:56,006 [INFO]: Received MQTT message: send_data
+2023-10-31 15:21:56,039 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:21:56,868 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:22:37,604 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:22:42,404 [INFO]: Received MQTT message: send_data
+2023-10-31 15:22:51,604 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:22:55,604 [INFO]: Received MQTT message: send_data
+2023-10-31 15:23:37,203 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:23:41,806 [INFO]: Received MQTT message: send_data
+2023-10-31 15:23:51,003 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:23:55,003 [INFO]: Received MQTT message: send_data
+2023-10-31 15:23:56,890 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:23:57,968 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:24:13,300 [INFO]: 10.25.70.252 - - [31/Oct/2023 15:24:13] "[37mGET / HTTP/1.1[0m" 200 -
+2023-10-31 15:24:13,327 [INFO]: 10.25.70.252 - - [31/Oct/2023 15:24:13] "[37mGET /video_feed HTTP/1.1[0m" 200 -
+2023-10-31 15:24:36,602 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:24:41,601 [INFO]: Received MQTT message: send_data
+2023-10-31 15:24:50,802 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:24:54,802 [INFO]: Received MQTT message: send_data
+2023-10-31 15:25:36,401 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:25:41,401 [INFO]: Received MQTT message: send_data
+2023-10-31 15:25:50,601 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:25:54,601 [INFO]: Received MQTT message: send_data
+2023-10-31 15:25:58,014 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:25:58,975 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:26:33,200 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:26:38,000 [INFO]: Received MQTT message: send_data
+2023-10-31 15:26:47,200 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:26:51,200 [INFO]: Received MQTT message: send_data
+2023-10-31 15:27:29,799 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:27:34,799 [INFO]: Received MQTT message: send_data
+2023-10-31 15:27:43,799 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:27:47,998 [INFO]: Received MQTT message: send_data
+2023-10-31 15:27:58,999 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:27:59,891 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:28:26,598 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:28:31,398 [INFO]: Received MQTT message: send_data
+2023-10-31 15:28:40,597 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:28:44,602 [INFO]: Received MQTT message: send_data
+2023-10-31 15:29:23,196 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:29:28,396 [INFO]: Received MQTT message: send_data
+2023-10-31 15:29:37,396 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:29:41,596 [INFO]: Received MQTT message: send_data
+2023-10-31 15:29:59,917 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:30:00,853 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:30:11,395 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:30:15,796 [INFO]: Received MQTT message: send_data
+2023-10-31 15:30:24,995 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:30:28,995 [INFO]: Received MQTT message: send_data
+2023-10-31 15:30:58,795 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:31:02,994 [INFO]: Received MQTT message: send_data
+2023-10-31 15:31:11,594 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:31:15,595 [INFO]: Received MQTT message: send_data
+2023-10-31 15:31:53,595 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:31:58,393 [INFO]: Received MQTT message: send_data
+2023-10-31 15:32:00,903 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:32:01,759 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:32:06,992 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:32:10,993 [INFO]: Received MQTT message: send_data
+2023-10-31 15:32:48,992 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:32:53,993 [INFO]: Received MQTT message: send_data
+2023-10-31 15:33:02,391 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:33:06,392 [INFO]: Received MQTT message: send_data
+2023-10-31 15:33:44,391 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:33:49,191 [INFO]: Received MQTT message: send_data
+2023-10-31 15:33:57,790 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:34:01,791 [INFO]: Received MQTT message: send_data
+2023-10-31 15:34:01,820 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:34:02,960 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:34:39,789 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:34:44,990 [INFO]: Received MQTT message: send_data
+2023-10-31 15:34:53,989 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:34:57,990 [INFO]: Received MQTT message: send_data
+2023-10-31 15:35:29,388 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:35:33,989 [INFO]: Received MQTT message: send_data
+2023-10-31 15:35:43,188 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:35:47,187 [INFO]: Received MQTT message: send_data
+2023-10-31 15:36:03,012 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:36:04,024 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:36:22,188 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:36:26,987 [INFO]: Received MQTT message: send_data
+2023-10-31 15:36:36,187 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:36:40,189 [INFO]: Received MQTT message: send_data
+2023-10-31 15:37:15,387 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:37:20,387 [INFO]: Received MQTT message: send_data
+2023-10-31 15:37:29,586 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:37:33,587 [INFO]: Received MQTT message: send_data
+2023-10-31 15:38:04,069 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:38:04,978 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:38:04,985 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:38:09,585 [INFO]: Received MQTT message: send_data
+2023-10-31 15:38:18,585 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:38:22,786 [INFO]: Received MQTT message: send_data
+2023-10-31 15:38:57,785 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:39:02,585 [INFO]: Received MQTT message: send_data
+2023-10-31 15:39:11,784 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:39:15,784 [INFO]: Received MQTT message: send_data
+2023-10-31 15:39:50,982 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:39:55,983 [INFO]: Received MQTT message: send_data
+2023-10-31 15:40:05,019 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:40:05,183 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:40:05,907 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:40:09,182 [INFO]: Received MQTT message: send_data
+2023-10-31 15:40:40,582 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:40:44,983 [INFO]: Received MQTT message: send_data
+2023-10-31 15:40:54,181 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:40:58,182 [INFO]: Received MQTT message: send_data
+2023-10-31 15:41:33,381 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:41:38,181 [INFO]: Received MQTT message: send_data
+2023-10-31 15:41:47,181 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:41:51,381 [INFO]: Received MQTT message: send_data
+2023-10-31 15:42:05,935 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:42:06,830 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:42:26,380 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:42:31,579 [INFO]: Received MQTT message: send_data
+2023-10-31 15:42:39,980 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:42:44,179 [INFO]: Received MQTT message: send_data
+2023-10-31 15:43:18,578 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:43:22,979 [INFO]: Received MQTT message: send_data
+2023-10-31 15:43:31,978 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:43:36,178 [INFO]: Received MQTT message: send_data
+2023-10-31 15:44:06,853 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:44:07,800 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:44:11,178 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:44:15,977 [INFO]: Received MQTT message: send_data
+2023-10-31 15:44:25,176 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:44:29,177 [INFO]: Received MQTT message: send_data
+2023-10-31 15:45:04,376 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:45:09,376 [INFO]: Received MQTT message: send_data
+2023-10-31 15:45:18,576 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:45:22,575 [INFO]: Received MQTT message: send_data
+2023-10-31 15:45:39,175 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:45:41,976 [INFO]: Received MQTT message: send_data
+2023-10-31 15:45:57,574 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:46:01,779 [INFO]: Received MQTT message: send_data
+2023-10-31 15:46:07,842 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:46:09,270 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:46:10,374 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:46:14,375 [INFO]: Received MQTT message: send_data
+2023-10-31 15:46:48,974 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:46:53,573 [INFO]: Received MQTT message: send_data
+2023-10-31 15:47:02,174 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:47:06,177 [INFO]: Received MQTT message: send_data
+2023-10-31 15:47:40,773 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:47:45,773 [INFO]: Received MQTT message: send_data
+2023-10-31 15:47:54,173 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:47:58,177 [INFO]: Received MQTT message: send_data
+2023-10-31 15:48:09,316 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:48:11,136 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:48:30,172 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:48:34,176 [INFO]: Received MQTT message: send_data
+2023-10-31 15:48:43,372 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:48:47,375 [INFO]: Received MQTT message: send_data
+2023-10-31 15:49:18,771 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:49:23,572 [INFO]: Received MQTT message: send_data
+2023-10-31 15:49:31,971 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:49:36,171 [INFO]: Received MQTT message: send_data
+2023-10-31 15:50:10,571 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:50:15,572 [INFO]: Received MQTT message: send_data
+2023-10-31 15:50:15,592 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:50:16,351 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:50:24,171 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:50:28,172 [INFO]: Received MQTT message: send_data
+2023-10-31 15:50:59,970 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:51:04,774 [INFO]: Received MQTT message: send_data
+2023-10-31 15:51:13,171 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:51:17,170 [INFO]: Received MQTT message: send_data
+2023-10-31 15:51:48,970 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:51:53,369 [INFO]: Received MQTT message: send_data
+2023-10-31 15:52:02,369 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:52:06,569 [INFO]: Received MQTT message: send_data
+2023-10-31 15:52:16,374 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:52:17,205 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:52:36,369 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:52:41,369 [INFO]: Received MQTT message: send_data
+2023-10-31 15:52:49,769 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:52:53,968 [INFO]: Received MQTT message: send_data
+2023-10-31 15:53:25,768 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:53:30,368 [INFO]: Received MQTT message: send_data
+2023-10-31 15:53:38,768 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:53:42,972 [INFO]: Received MQTT message: send_data
+2023-10-31 15:54:14,768 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:54:18,967 [INFO]: Received MQTT message: send_data
+2023-10-31 15:54:19,020 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:54:19,974 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:54:27,567 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:54:31,567 [INFO]: Received MQTT message: send_data
+2023-10-31 15:55:03,367 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:55:08,366 [INFO]: Received MQTT message: send_data
+2023-10-31 15:55:16,967 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:55:20,966 [INFO]: Received MQTT message: send_data
+2023-10-31 15:55:52,766 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:55:57,365 [INFO]: Received MQTT message: send_data
+2023-10-31 15:56:05,966 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:56:09,966 [INFO]: Received MQTT message: send_data
+2023-10-31 15:56:20,009 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:56:20,849 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:56:41,765 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:56:45,965 [INFO]: Received MQTT message: send_data
+2023-10-31 15:56:54,565 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:56:58,565 [INFO]: Received MQTT message: send_data
+2023-10-31 15:57:30,364 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:57:35,564 [INFO]: Received MQTT message: send_data
+2023-10-31 15:57:43,964 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:57:47,964 [INFO]: Received MQTT message: send_data
+2023-10-31 15:58:20,891 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 15:58:21,363 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:58:21,684 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 15:58:25,964 [INFO]: Received MQTT message: send_data
+2023-10-31 15:58:34,364 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:58:38,564 [INFO]: Received MQTT message: send_data
+2023-10-31 15:59:11,762 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:59:16,362 [INFO]: Received MQTT message: send_data
+2023-10-31 15:59:24,962 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 15:59:28,962 [INFO]: Received MQTT message: send_data
+2023-10-31 16:00:00,761 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:00:05,161 [INFO]: Received MQTT message: send_data
+2023-10-31 16:00:13,561 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:00:17,561 [INFO]: Received MQTT message: send_data
+2023-10-31 16:00:21,709 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 16:00:22,793 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 16:00:49,360 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:00:54,561 [INFO]: Received MQTT message: send_data
+2023-10-31 16:01:02,960 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:01:18,959 [INFO]: Received MQTT message: send_data
+2023-10-31 16:01:52,559 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:01:56,959 [INFO]: Received MQTT message: send_data
+2023-10-31 16:02:05,359 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:02:09,559 [INFO]: Received MQTT message: send_data
+2023-10-31 16:02:22,833 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 16:02:23,663 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 16:02:42,958 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:02:47,559 [INFO]: Received MQTT message: send_data
+2023-10-31 16:02:56,157 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:03:00,158 [INFO]: Received MQTT message: send_data
+2023-10-31 16:03:33,757 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:03:38,156 [INFO]: Received MQTT message: send_data
+2023-10-31 16:03:46,557 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:03:50,759 [INFO]: Received MQTT message: send_data
+2023-10-31 16:04:23,712 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 16:04:24,156 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:04:24,538 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 16:04:28,357 [INFO]: Received MQTT message: send_data
+2023-10-31 16:04:36,956 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:04:40,957 [INFO]: Received MQTT message: send_data
+2023-10-31 16:05:12,755 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:05:17,155 [INFO]: Received MQTT message: send_data
+2023-10-31 16:05:25,556 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:05:29,755 [INFO]: Received MQTT message: send_data
+2023-10-31 16:06:03,155 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:06:07,554 [INFO]: Received MQTT message: send_data
+2023-10-31 16:06:16,154 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:06:20,154 [INFO]: Received MQTT message: send_data
+2023-10-31 16:06:24,561 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 16:06:25,418 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 16:06:53,753 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:10:49,549 [INFO]: Received MQTT message: send_data
+2023-10-31 16:10:49,571 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 16:10:50,417 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 16:11:07,748 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:20:23,138 [INFO]: Received MQTT message: send_data
+2023-10-31 16:20:23,171 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-10-31 16:20:24,101 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-10-31 16:20:35,737 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:20:39,137 [INFO]: Received MQTT message: send_data
+2023-10-31 16:20:51,737 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:20:54,936 [INFO]: Received MQTT message: send_data
+2023-10-31 16:21:05,137 [INFO]: Received MQTT message: stop_send_data
+2023-10-31 16:21:09,736 [INFO]: Received MQTT message: send_data
+2023-10-31 16:22:15,529 [INFO]: Received MQTT message: stop_send_data
+2023-11-01 15:58:07,986 [INFO]: Connected to MQTT broker with result code 0
+2023-11-01 15:58:07,987 [INFO]: Running on http://127.0.1.1:5000/
+2023-11-01 15:58:08,050 [INFO]:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2023-11-01 16:16:44,945 [INFO]: Connected to MQTT broker with result code 0
+2023-11-01 16:16:44,946 [INFO]: Running on http://127.0.1.1:5000/
+2023-11-01 16:16:44,961 [INFO]:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2023-11-01 16:21:34,009 [INFO]: Connected to MQTT broker with result code 0
+2023-11-01 16:21:34,010 [INFO]: Running on http://127.0.1.1:5000/
+2023-11-01 16:21:34,026 [INFO]:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2023-11-01 16:29:20,768 [INFO]: Received MQTT message: send_data
+2023-11-01 16:29:20,819 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-11-01 16:29:22,395 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-11-01 16:31:04,518 [INFO]: Received MQTT message: stop_send_data
+2023-11-01 16:31:07,899 [INFO]: Received MQTT message: send_data
+2023-11-01 16:31:22,422 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-11-01 16:31:23,467 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-11-01 16:33:23,512 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-11-01 16:33:24,498 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-11-01 16:35:24,542 [INFO]: Image saved locally at: images/captured_image.jpg
+2023-11-01 16:35:25,674 [INFO]: Image uploaded to S3: mybucketcimacaptured_image.jpg
+2023-11-01 16:35:50,247 [INFO]: Received MQTT message: stop_send_data
+2023-11-01 16:35:53,474 [INFO]: Received MQTT message: send_data
+2023-11-01 16:37:15,674 [INFO]: Received MQTT message: stop_send_data
