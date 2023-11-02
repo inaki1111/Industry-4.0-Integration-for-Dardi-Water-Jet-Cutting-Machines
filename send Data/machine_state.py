@@ -10,6 +10,7 @@ IDLE_STATE = "000"
 START_STATE = ["011", "111"]
 
 publish_topic = "start_process"
+status_topic = "Tipo_corte"  # This is the new topic for "alta" and "baja"
 process_started_msg = "send_data"
 process_stopped_msg = "stop_send_data"
 
@@ -48,6 +49,15 @@ def read_from_serial(port, baudrate=115200):
                         if line_str in START_STATE and current_state == IDLE_STATE:
                             current_state = line_str
                             client.publish(publish_topic, process_started_msg)
+
+                            # Check for the "alta" and "baja" conditions
+                            if line_str == "011":
+                                client.publish(status_topic, "alta")
+                                print("Cortando en alta")
+                            elif line_str == "111":
+                                client.publish(status_topic, "baja")
+                                print("Cortando en baja")
+
                         elif line_str == IDLE_STATE and current_state in START_STATE:
                             current_state = IDLE_STATE
                             client.publish(publish_topic, process_stopped_msg)
