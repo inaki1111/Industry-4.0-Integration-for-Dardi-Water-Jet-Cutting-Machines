@@ -7,7 +7,7 @@ mqtt_port = 1883
 
 # Define states
 IDLE_STATE = "000"
-START_STATE = ["011", "111"]
+START_STATE = ["110", "111", "101", "100"]
 
 publish_topic = "start_process"
 status_topic = "Tipo_corte"  # This is the new topic for "alta" and "baja"
@@ -51,12 +51,25 @@ def read_from_serial(port, baudrate=115200):
                             client.publish(publish_topic, process_started_msg)
 
                             # Check for the "alta" and "baja" conditions
-                            if line_str == "011":
-                                client.publish(status_topic, "alta")
+                            if line_str == "110":
+                                client.publish(status_topic, "011")
                                 print("Cortando en alta")
                             elif line_str == "111":
-                                client.publish(status_topic, "baja")
+                                client.publish(status_topic, "111")
                                 print("Cortando en baja")
+
+                            elif line_str == "000":
+                                client.publish(status_topic, "000")
+                                print("apagado")
+
+                            elif line_str == "101":
+                                client.publish(status_topic, "101")
+                                print("baja sin abrasivo")
+
+                            elif line_str == "001":
+                                client.publish(status_topic, "001")
+                                print("alta sin abrasivo")
+
 
                         elif line_str == IDLE_STATE and current_state in START_STATE:
                             current_state = IDLE_STATE
