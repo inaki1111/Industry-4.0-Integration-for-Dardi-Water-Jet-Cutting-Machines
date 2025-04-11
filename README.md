@@ -1,22 +1,21 @@
-# Sistema-de-industria-4.0-
+# Industry 4.0 Integration for Dardi Water Jet Cutting Machines
 
+**Description:**
 
-**Descripción:**
+Welcome to the repository for the Industry 4.0 system designed for the Dardi water jet cutting machine! This project represents an exciting step forward in automating and monitoring industrial processes, leveraging cutting-edge technologies such as the ESP32, current sensors, IMU, encoder, and a Raspberry Pi to provide enhanced control and supervision.
 
-¡Bienvenidos al repositorio del sistema de Industria 4.0 para la máquina de corte con chorro de agua Dardi! Este proyecto representa un emocionante avance en la automatización y monitorización de procesos industriales, utilizando tecnologías de vanguardia como ESP32, sensores de corriente, IMU, encoder y una Raspberry Pi para brindar un control y supervisión mejorados.
+**Key Features:**
 
-**Características Destacadas:**
+* **ESP32 and Advanced Sensors:** We harness the power of the ESP32 in combination with current sensors, an IMU, and an encoder to gather precise data from the water jet cutting process.
+* **Raspberry Pi with Interactive GUI:** The Raspberry Pi hosts a graphical user interface (GUI) that enables operators to intuitively monitor and control the cutting process.
+* **AWS Connectivity:** All collected data is processed and stored in Amazon Web Services (AWS), enabling access to critical information anytime, anywhere.
 
-* **ESP32 y Sensores Avanzados:** Utilizamos la potencia de ESP32 en combinación con sensores de corriente, IMU y encoder para recopilar datos precisos del proceso de corte con chorro de agua.
-* **Raspberry Pi con GUI Interactiva:** La Raspberry Pi aloja una interfaz gráfica de usuario (GUI) que permite a los operadores supervisar y controlar el proceso de corte de manera intuitiva.
-* **Conectividad AWS:** Todos los datos recopilados se procesan y almacenan en la nube de Amazon Web Services (AWS), lo que facilita el acceso a información crítica en cualquier momento y desde cualquier lugar.
+**Project Objectives:**
 
-**Objetivos del Proyecto:**
+Our main objective is to improve the efficiency and quality of the Dardi water jet cutting process by implementing Industry 4.0 technologies. We aim to provide operators with a powerful tool to monitor and optimize operations as well as to make informed decisions.
 
-Nuestro objetivo principal es mejorar la eficiencia y la calidad en el proceso de corte con chorro de agua Dardi mediante la implementación de tecnologías de Industria 4.0. Queremos proporcionar a los operadores una herramienta poderosa para monitorear y optimizar las operaciones, así como para tomar decisiones informadas.
+**Repository Structure:**
 
-**Estructura del Repositorio:**
-
-* **Código Fuente:** Encuentra aquí el código fuente tanto para ESP32 como para la Raspberry Pi.
-* **Documentación:** Documentación detallada que describe la configuración, el funcionamiento y los componentes del sistema.
-* **Recursos Adicionales:** Enlaces y recursos útiles relacionados con la Industria 4.0, AWS y más.
+* **Source Code:** Find the source code here for both the ESP32 and the Raspberry Pi.
+* **Documentation:** Detailed documentation describing the setup, operation, and components of the system.
+* **Additional Resources:** Helpful links and resources related to Industry 4.0, AWS, and more.
