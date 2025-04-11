@@ -12,11 +12,11 @@ Welcome to the repository for the **SmartJet 4.0** system designed for the Dardi
 
 * **ESP32 and Advanced Sensors:** We harness the power of the ESP32 in combination with current sensors, an IMU, and an encoder to gather precise data from the water jet cutting process.
 
-<p align="center">
-  <img src="/images/mcu1.jpg" alt="MCU Module" width="50%">
-  <img src="/images/modulo%20de%20vibraciones.jpg" alt="Vibration Module" width="50%">
-  <img src="/images/modulo%20de%20energia.jpg" alt="Power Module" width="50%">
-</p>
+<div align="center">
+  <img src="/images/mcu1.jpg" alt="MCU Module" width="25%" style="display:inline-block; margin-right: 1%;">
+  <img src="/images/modulo%20de%20vibraciones.jpg" alt="Vibration Module" width="25%" style="display:inline-block; margin-right: 1%;">
+  <img src="/images/modulo%20de%20energia.jpg" alt="Power Module" width="25%" style="display:inline-block;">
+</div>
 
 * **Raspberry Pi with Interactive GUI:** The Raspberry Pi hosts a graphical user interface (GUI) that enables operators to intuitively monitor and control the cutting process.
 
@@ -48,3 +48,15 @@ Below is the modular system architecture diagram used in this project:
 <p align="center">
   <img src="/images/diagrama%20modular.jpg" alt="Modular System Diagram" width="80%">
 </p>
+
+---
+
+### Acknowledgments
+
+Special thanks to the talented team behind this project:
+
+- **Eros Giovanni Guillén Velázquez**  
+- **Annel Michelle Cruz Rodríguez**  
+- **Abraham Sánchez Guerrero**  
+- **Josué Vidales Medina**
+
